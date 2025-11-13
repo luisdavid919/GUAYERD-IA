@@ -2,5 +2,6 @@
     "powerquery.client.additionalSymbolsDirectories": [
         "c:/Users/Usuario/Downloads/Aurelion/.vscode/excel-pq-symbols"
     ],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "python.analysis.typeCheckingMode": "standard"
 }

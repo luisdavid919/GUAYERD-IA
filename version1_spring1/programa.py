@@ -10,7 +10,8 @@
 # ===============================================
 
 import numpy as np
-
+import subprocess
+import sys
 # ------------------------------------------------
 # Funciones de las secciones
 # ------------------------------------------------
@@ -22,7 +23,9 @@ def mostrar_menu():
     print("1. Historia, problema y solución")
     print("2. Estructura de los datos")
     print("3. Análisis con NumPy")
-    print("4. Salir")
+    print("4. Limpieza y Análisis (Sprint2)")
+    print("5. Estadísticas Descriptivas (Sprint2)") 
+    print("6. Salir")
     print("==============================")
 
 def seccion_1():
@@ -129,13 +132,12 @@ def seccion_3():
 # ------------------------------------------------
 # Ejecución principal
 # ------------------------------------------------
-
 def main():
     opcion = 0
 
     while opcion != 4:
         mostrar_menu()
-        opcion = int(input("Seleccione una opción (1-4): "))
+        opcion = int(input("Seleccione una opción (1-6): "))
 
         if opcion == 1:
             seccion_1()
@@ -144,6 +146,10 @@ def main():
         elif opcion == 3:
             seccion_3()
         elif opcion == 4:
+            subprocess.run([sys.executable, "version1_spring1/limpieza-analisis_corregido.py"])
+        elif opcion == 5:
+            subprocess.run([sys.executable, "version1_spring1/Estadisticas_corregido.py"])
+        elif opcion == 6:
             print("\nGracias por usar el programa Tienda Aurelion. ¡Hasta pronto!")
         else:
             print(" Opción no válida. Intente nuevamente.")
