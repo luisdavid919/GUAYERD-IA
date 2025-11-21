@@ -102,7 +102,7 @@ def entrenar_y_evaluar_modelos(X, y):
     print("Tamaño X_test :", X_test.shape)
 
     # Usamos un colormap azul/blanco
-    cmap_azul = plt.cm.Blues
+    cmap_azul = plt.get_cmap('Blues')
 
     # ---------- Regresión Logística ----------
     print("\n==============================")
@@ -201,7 +201,7 @@ def plot_decision_boundary_simple(df):
 
     # Gráfico con fondo azul/blanco
     plt.figure()
-    plt.contourf(xx, yy, Z, alpha=0.3, cmap=plt.cm.Blues)
+    plt.contourf(xx, yy, Z, alpha=0.3, cmap=plt.get_cmap('Blues'))
 
     # Puntos reales
     plt.scatter(
